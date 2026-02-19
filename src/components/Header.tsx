@@ -56,12 +56,21 @@ const Header = () => {
             </Link>
             <Link
               to="/login"
-              className={`px-4 py-2 rounded-lg transition-colors ${location.pathname === "/intro"
+              className={`px-4 py-2 rounded-lg transition-colors ${location.pathname === "/login"
                 ? "bg-primary text-primary-foreground"
                 : "text-muted-foreground hover:text-foreground hover:bg-accent"
                 }`}
             >
-              Sign In/Up
+              Sign In
+            </Link>
+            <Link
+              to="/register"
+              className={`px-4 py-2 rounded-lg transition-colors ${location.pathname === "/register"
+                ? "bg-primary text-primary-foreground"
+                : "text-muted-foreground hover:text-foreground hover:bg-accent"
+                }`}
+            >
+              Sign Up
             </Link>
           </nav>
         </div>
