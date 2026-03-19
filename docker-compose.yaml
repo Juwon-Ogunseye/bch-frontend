@@ -1,0 +1,28 @@
+version: '3.8'
+
+services:
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: bch-frontend
+    ports:
+      - "8080:80"
+    networks:
+      - bch-network
+    restart: unless-stopped
+
+  # backend:
+  #   build:
+  #     context: ../bch-backend
+  #     dockerfile: Dockerfile
+  #   container_name: bch-backend
+  #   ports:
+  #     - "3000:3000"
+  #   networks:
+  #     - bch-network
+  #   restart: unless-stopped
+
+networks:
+  bch-network:
+    driver: bridge
